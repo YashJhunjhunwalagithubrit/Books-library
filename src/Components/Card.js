@@ -1,5 +1,8 @@
 import react from "react";
 import { useState } from "react";
+import Modal from "./Modal";
+
+
 const Card = ({ book }) => {
 
     const [show,setShow]=useState(false);
@@ -22,6 +25,7 @@ const Card = ({ book }) => {
                                     <p className="amount">&#8377;{amount}</p>
                                 </div>
                             </div>
+                                <Modal show={show} item={bookItem} onClose={()=>setShow(false)}/>
                             </>
                         )
                     }
